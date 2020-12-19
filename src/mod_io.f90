@@ -1,6 +1,28 @@
+!>@mainpage Modern fortran Library
+!>
+!> About this Library
+!>====================
+!> - 書き溜めた個人用fortranモジュールを整理した。
+!> - 煩雑なパラメータを隠し、スッキリとした使い心地の型と関数を提供するように心がけた。
+!> - 2019年に発足した https://github.com/fortran-lang/stdlib の開発速度が非常に早い。
+!>   本ライブラリは、そこには無い機能を挙げている(つもり)。
+!> - 今後、「リンクリスト」、「数学関数」など、他の機能を追加する。。。かもしれない。
+!>
+!> Build & install
+!>====================
+!> CMAKEの流儀でインストール可能。
+!> doxygenを持っている人は、"make doxygen"でドキュメントを生成できる。
+!>@verbatim
+!> mkdir build && cd build && cmake ../
+!> make && make doxygen
+!> make install
+!>@endverbatim
+
 !>@file Mod_IO.f90
 !>@brief Input/Output module like gnu Octave.
 !>
+!> Auther : Yuichiro SAKAMOTO
+!> License: MIT
 ! 
 !>@brief Input/Output module@n
 !>
