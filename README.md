@@ -1,7 +1,7 @@
 # modernfortran-libs
 Object Based modern fortran library
 
-## GNU Octave like I/O module by fortran
+## A fortran I/O library with routines sililar to the GNU Octave's dlmread
 In GNU Octave, functions such as dlmread and dlmwrite can be used to read text files. 
 The *mod_io.f90* is a module that simulates the behavior of these functions.
 
