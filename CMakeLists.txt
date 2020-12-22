@@ -49,4 +49,9 @@ else()
   MESSAGE(WARNING "doxygen binary couldn't be found")
 endif()
 
+# get module directory path
+#get_property(fmods TARGET modernfortran-libs PROPERTY Fortran_MODULE_DIRECTORY)
+#include_directories(${fmods})
+
 add_subdirectory(src)
+add_subdirectory(app)

@@ -66,7 +66,7 @@ module io
     real(kind=dp),dimension(:)  ,allocatable,public :: minvalue !<min value
     real(kind=dp),dimension(:)  ,allocatable,public :: maxvalue !<max value
     contains
-      final :: destroy_t_dfstats          !< deallocate allocatable components
+      !final :: destroy_t_dfstats         !< deallocate allocatable components
       ! copy data from array
       procedure,non_overridable,private :: array2t_dfstats_1d !<1 dimension
       procedure,non_overridable,private :: array2t_dfstats_2d !<2 dimension
@@ -89,9 +89,9 @@ module io
 
   contains
     !--------------------------------------------------------
-    !>@brief finalization of t_dfstats
+    !>@brief deallocate all contents of t_dfstats
     pure elemental subroutine destroy_t_dfstats(self)
-      type(t_dfstats),intent(inout) :: self
+      class(t_dfstats),intent(inout) :: self
       if(allocated(self%filename))then
         deallocate(self%filename)
       endif
