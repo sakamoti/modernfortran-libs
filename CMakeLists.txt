@@ -55,3 +55,8 @@ endif()
 
 add_subdirectory(src)
 add_subdirectory(app)
+
+#----------------
+SET(CPACK_GENERATOR "STGZ" "TGZ" "DEB")
+SET(CPACK_DEBIAN_PACKAGE_MAINTAINER  "Yuichiro SAKAMOTO")
+include(CPack)
