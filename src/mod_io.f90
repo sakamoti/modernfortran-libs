@@ -399,8 +399,8 @@ module io
       !message
       print*,"--- dlmread_nosearch -------"
       print*,"now reading data... "//trim(fname)
-      print*,"先頭読み飛ばし指定(skip)によるスキップ=",skiphead
-      print*,'(1X,3(A,I10,2X))',"データ行数=",nrow,"列数=",ncol
+      print*,"skip lines =",skiphead
+      print*,'(1X,3(A,I10,2X))',"rows=",nrow,"columns=",ncol
       !データの割付
       if(present(sel))then
         allocate(df%xx(nrow,size(sel)),stat=astat)
@@ -408,7 +408,7 @@ module io
         allocate(df%xx(nrow,ncol),stat=astat)
       endif
       if(astat.ne.0)then
-        stop "type(t_dfstats)の要素を確保できませんでした．"
+        stop "allocation of type(t_dfstats) is failed."
       endif
       !データの読み込み
       open(file=fname,newunit=funit,status='old')
@@ -425,7 +425,7 @@ module io
       enddo
       close(funit)
       !message
-      print*,"データ読み込み終了."
+      print*,"finish reading."
       print*,"--- dlmread_nosearch end ---"
     end subroutine
     !--------------------------------------------------------
@@ -536,11 +536,11 @@ module io
         !message
         print*,"--- dlmread -------"
         print*,"now reading data... "//trim(fname)
-        print*,"コメントと空行によるスキップ=",skipline
-        print*,'(1X,3(3A,I3))',"区切り文字=",sep_txt,",ASCII文字コード番号=",ichar(sep_txt)
-        print*,"先頭読み飛ばし指定(skip)によるスキップ=",skiphead
-        print*,'(1X,3(A,I10,2X))',"全行数=",allline,"読み込み行数=",nline,"文字数=",charsize
-        print*,"列数=",ncol
+        print*,"skiplines (comments and null lines)=",skipline
+        print*,'(1X,3(3A,I3))',"sepalator=",sep_txt,",ASCII Code Number=",ichar(sep_txt)
+        print*,"skip lines from head=",skiphead
+        print*,'(1X,3(A,I10,2X))',"all lines=",allline,"read lines=",nline,"charsize=",charsize
+        print*,"ncol=",ncol
         print*,"--- dlmread end ---"
         !reading data
         i=1
