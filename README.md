@@ -39,6 +39,8 @@ end program
 ```
 ## doubly_linkedlist module
 
+Detail example is shown in the `app/test_doubly_linkedlist.f90`.
+
 ```fortran
 program usage5()
     use iso_fortran_env
