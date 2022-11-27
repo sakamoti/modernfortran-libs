@@ -18,7 +18,7 @@
 !> make install
 !>@endverbatim
 
-!>@file Mod_IO.f90
+!>@file mod_io.f90
 !>@brief Input/Output module like gnu Octave.
 !>
 !> Auther : Yuichiro SAKAMOTO

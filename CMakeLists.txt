@@ -5,7 +5,7 @@ project (modernfortran-libs
   LANGUAGES Fortran
   )
 set(CMAKE_VERBOSE_MAKEFILE OFF)
-set(CMAKE_BUILD_TYPE Debug)
+#set(CMAKE_BUILD_TYPE Debug)
 #set(CMAKE_BUILD_TYPE Release)
 option(BUILD_SHARED_LIBS "Shared library ON/OFF" ON)
 enable_testing()

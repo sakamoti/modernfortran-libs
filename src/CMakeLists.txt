@@ -1,6 +1,7 @@
 #-----------------
 set(modernfortran-libs_sources 
   mod_io.f90
+  mod_doubly_linkedlist.f90
   )
 #-----------------
 set(CMAKE_Fortran_MODULE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/modernfortran-libs)

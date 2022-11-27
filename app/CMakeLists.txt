@@ -14,3 +14,10 @@ target_link_libraries(test_dlmreadwrite modernfortran-libs)
 target_include_directories(test_dlmreadwrite PUBLIC ${fmods})
 #--
 add_test(NAME test_dlmreadwrite COMMAND test_dlmreadwrite WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
+#-----------
+add_executable(test_doubly_linkedlist test_doubly_linkedlist.f90)
+target_link_libraries(test_doubly_linkedlist modernfortran-libs)
+target_include_directories(test_doubly_linkedlist PUBLIC ${fmods})
+#--
+add_test(NAME test_doubly_linkedlist COMMAND test_doubly_linkedlist WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
+#--
